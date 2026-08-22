@@ -20,3 +20,10 @@ Schematic and PCB were designed in KiCad. All manufacturing files can be found i
 
 # Firmware
 Source code for ESP32 firmware can be found in the Firmware folder.  
+
+
+# Firmware Setup
+* Install the Arduino IDE
+* For the microcontroller, set it to ESP32 Development Kit
+* Install <Wifi.h> and <Webserver.h>
+* Set baud rate to 115200
