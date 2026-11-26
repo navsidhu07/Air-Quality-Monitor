@@ -105,15 +105,31 @@ framework for the ESP32.
 
 ### Firmware Functionality
 
-- Acquisition of temperature, humidity, and gas sensor data
-- Processing of environmental sensor readings
-- Air quality classification using predefined thresholds
+- Acquisition of temperature, humidity, and gas sensor readings
+- Air quality classification logic using predefined thresholds
 - Periodic LCD updates
 - Control of LED status indicators
 - Wi-Fi network connectivity
 - HTTP web server for wireless monitoring
+- JSON-based data transfer to the web dashboard
 
-The firmware source code can be found in the
+### GPIO Pin Assignments
+
+| Component | Signal | ESP32 GPIO |
+| --- | --- | --- |
+| DHT22 | Data | 23 |
+| MQ-135 | Analog Output | 36 |
+| LCD1602 | RS | 19 |
+| LCD1602 | Enable | 18 |
+| LCD1602 | D4 | 17 |
+| LCD1602 | D5 | 16 |
+| LCD1602 | D6 | 4 |
+| LCD1602 | D7 | 21 |
+| Red LED | Output | 25 |
+| Yellow LED | Output | 26 |
+| Green LED | Output | 27 |
+
+The firmware source code is available in the
 [Firmware](Firmware/) directory.
 
 ## Web Dashboard
