@@ -137,9 +137,18 @@ The firmware source code is available in the
 The ESP32 hosts a local HTTP web server that allows users
 to monitor environmental conditions through a web browser.
 
-The dashboard was developed using HTML, CSS, and JavaScript
-and displays temperature, humidity, gas sensor readings,
-and air quality status.
+The dashboard was developed using HTML, CSS, and JavaScript.
+Sensor readings are transferred from the ESP32 to the browser
+through a JSON-based HTTP endpoint.
+
+### Dashboard Features
+
+- Temperature and humidity visualization
+- Gas sensor readings
+- Color-coded air quality status indicators
+- Automatic data requests every three seconds
+- Real-time clock display
+- Local wireless accessibility
 
 ## Testing and Validation
 
@@ -159,14 +168,34 @@ The MQ-135 is used for relative air quality monitoring
 rather than calibrated gas concentration or standardized
 Air Quality Index (AQI) measurements.
 
+The current firmware uses raw ADC readings from the MQ-135.
+The classification thresholds require further refinement
+to align with the ESP32's default ADC range. Accurate gas
+concentration measurements and classification validation
+remain areas for future development.
+
 ## Firmware Setup
+
+### Requirements
+
+- Arduino IDE
+- ESP32 board package by Espressif Systems
+- DHT Sensor Library by Adafruit
+- Adafruit Unified Sensor library
+- LiquidCrystal library by Arduino
+
+The WiFi and WebServer libraries are included in the
+ESP32 Arduino board package.
+
+### Installation
 
 1. Install the Arduino IDE.
 2. Install the ESP32 board package through the Boards Manager.
 3. Select the appropriate ESP32 development board.
-4. Install the required sensor and LCD libraries.
+4. Install the required libraries through the Library Manager.
 5. Open the firmware file from the Firmware directory.
-6. Configure the Wi-Fi network credentials.
+6. Replace the Wi-Fi credential placeholders with your
+   local network credentials.
 7. Compile and upload the firmware to the ESP32.
 8. Open the Serial Monitor at a baud rate of 115200.
 9. Locate the ESP32's assigned IP address.
@@ -199,13 +228,12 @@ assembling, and validating the custom PCB.
 
 ## Future Improvements
 
-- Fabricate and validate the custom PCB
-- Calibrate the gas sensor
+- Fabricate, assemble, and validate the custom PCB
+- Refine gas sensor classification thresholds and calibration
 - Implement historical sensor data logging
 - Improve firmware modularity
 - Design a protective enclosure
-- Refine gas sensor classification thresholds and calibration
-- Implement non-blocking firmware timing using millis()
+- Implement non-blocking firmware timing using `millis()`
 
 ## Tools and Technologies
 
