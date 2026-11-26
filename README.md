@@ -204,6 +204,8 @@ assembling, and validating the custom PCB.
 - Implement historical sensor data logging
 - Improve firmware modularity
 - Design a protective enclosure
+- Refine gas sensor classification thresholds and calibration
+- Implement non-blocking firmware timing using millis()
 
 ## Tools and Technologies
 
