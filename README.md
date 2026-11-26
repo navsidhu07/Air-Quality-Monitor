@@ -94,8 +94,9 @@ the hardware into a single integrated system.
 
 <img width="843" height="852" alt="b cu" src="https://github.com/user-attachments/assets/35c8f2a0-e841-4b27-98bd-0330c3b99dd1" />
 
-The KiCad schematic, PCB layout, and manufacturing files
-can be found in the [Hardware](Hardware/) directory.
+The native KiCad project, schematic, PCB layout, and
+associated symbol and footprint files are available
+in the [Hardware](Hardware/) directory.
 
 ## Firmware
 
@@ -162,7 +163,11 @@ Air Quality Index (AQI) measurements.
 Air-Quality-Monitor/
 ├── Firmware/
 ├── Hardware/
-├── Images/
+│   ├── Air Quality Monitor.kicad_pro
+│   ├── Air Quality Monitor.kicad_sch
+│   ├── Air Quality Monitor.kicad_pcb
+│   ├── CP2102N-A02-GQFN20.kicad_sym
+│   └── WFQFN-20.kicad_mod
 └── README.md
 ```
 
