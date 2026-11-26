@@ -31,6 +31,18 @@ The ESP32 collects and processes environmental sensor data,
 controls the LCD and LED indicators, and hosts a local web
 server for wireless monitoring.
 
+```mermaid
+flowchart TD
+    A[DHT22 Temperature and Humidity Sensor] --> C[ESP32]
+    B[MQ-135 Gas Sensor] --> C
+
+    C --> D[LCD1602 Display]
+    C --> E[LED Status Indicators]
+    C --> F[HTTP Web Server]
+
+    F -->|Wi-Fi| G[Web Dashboard]
+```
+
 ## Hardware - Prototype
 
 A functional breadboard prototype was developed to establish
