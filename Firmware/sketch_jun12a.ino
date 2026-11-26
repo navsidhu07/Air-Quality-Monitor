@@ -5,8 +5,8 @@
 
 // Web Server Credentials:
 
-const char* ssid = "SpectrumSetup-83";
-const char* password = "greentrain069";
+const char* ssid = "YOUR_WIFI_NAME";
+const char* password = "YOUR_WIFI_PASSWORD";
 
 // Outputs
 
